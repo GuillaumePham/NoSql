@@ -1,29 +1,17 @@
 import { MongoClient } from 'mongodb';
 
-
 const url = 'mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2';
-
-
 const dbName = 'myReplicaSet'; 
-
 const maCollection = 'usersCollection'; 
 
 async function main() {
     const client = new MongoClient(url);
 
     try {
-        
         await client.connect();
         console.log('Connexion réussie au serveur MongoDB');
-        
-        
-        
         const db = client.db("");
-
-        
         const documents = await db.collection('maCollection').find({}).toArray();
-        
-        
         console.log('Documents récupérés de la collection', maCollection + ':');
         //console.log(documents);
     } catch (error) {
@@ -46,7 +34,6 @@ async function main() {
               console.error('Erreur lors de la connexion à MongoDB:', error);
           } finally {
               await client.close();
-              console.log('Connexion à MongoDB fermée');
           }
       }
       
