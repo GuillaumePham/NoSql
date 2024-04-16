@@ -1,0 +1,5 @@
+db.userCollection.insertOne({"name": "Guillaume Pham","age": 21,"email": "guillaume.pham@ynov.com","createdAt": "2023-05-07T15:11:49.439Z" })
+db.userCollection.find( { "name": "Guillaume Pham"} )
+db.usersCollection.find({ "age": { "$gt": 30 } })
+db.usersCollection.updateMany({}, { "$inc": { "age": 5 } })
+db.usersCollection.deleteOne({ "name": "Guillaume Pham" })
