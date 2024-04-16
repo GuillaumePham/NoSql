@@ -1,6 +1,6 @@
-##MongoDB Replica Set
+## MongoDB Replica Set
 
-###ETAPE 1
+### ETAPE 1
 
 Création cluster
 
@@ -172,6 +172,7 @@ use myReplicaSet
 
 
 Insertion de données :
+
 ```http
 db.userCollection.insertOne({"name": "Guillaume Pham","age": 21,"email": "guillaume.pham@ynov.com","createdAt": "2023-05-07T15:11:49.439Z" })
 ```
@@ -367,11 +368,5 @@ Résultat :
 
 
 
-
-
-
-#   N o S q l 
- 
- #   N o S q l 
  
  
