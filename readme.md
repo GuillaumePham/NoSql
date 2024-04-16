@@ -1,7 +1,6 @@
+##MongoDB Replica Set
 
-## MongoDB Replica Set
-
-### ETAPE 1
+###ETAPE 1
 
 Création cluster
 
@@ -371,6 +370,8 @@ Résultat :
 
 
 
-#   N o S q l  
- #   N o S q l  
+#   N o S q l 
+ 
+ #   N o S q l 
+ 
  
