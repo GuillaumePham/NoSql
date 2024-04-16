@@ -335,7 +335,6 @@ Résultat :
     email: 'Mikayla.Rice@gmail.com',
     createdAt: '2023-05-16T22:15:51.133Z'
   }
-]
 Type "it" for more
 ```
 
@@ -364,15 +363,3 @@ Résultat :
 ```http
 { "acknowledged" : true, "deletedCount" : 1 }
 ```
-
-
-
-
-
-
-
-#   N o S q l 
- 
- #   N o S q l 
- 
- 
