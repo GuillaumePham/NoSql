@@ -263,7 +263,7 @@ Résultat :
 Type "it" for more
 ```
 
-Augmentation d'une données :
+Augmentation d'une donnée (age de 5 ans pour chaque personne) :
 
 ```shell
 db.usersCollection.updateMany({}, { "$inc": { "age": 5 } })
