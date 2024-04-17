@@ -195,7 +195,7 @@ la version en sh ce trouve dans le dosier "Etape 2 / Insertion.sh"
 
 
 ### ETAPE TROIS
-
+Chaque commandes demandés sont trouvable dans le dossier 'Etape 3 /requetes' 
 Accées au cli :
 
 ```shell
