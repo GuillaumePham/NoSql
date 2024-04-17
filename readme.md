@@ -5,19 +5,19 @@
 
 Création cluster
 
-```http
+```shell
   docker network create mongoCluster
 ```
 
 Lancement du docker
 
-```http
+```shell
   docker compose up -d
 ```
 
 Création du jeu de replica
 
-```http
+```shell
   docker exec -it mongo_instance_1 mongosh --eval "rs.initiate({
  _id: \"myReplicaSet\",
  members: [
@@ -30,13 +30,13 @@ Création du jeu de replica
 
 Verification du statut de chaque instance :
 
-```http
+```shell
 docker exec -it mongo1 mongosh --eval "rs.status()"
 ```
 
 Ces derniers 
 
-```http
+```shell
 members: [
     {
       _id: 0,
@@ -121,13 +121,13 @@ members: [
 
 Installation de faker:
 
-```http
+```shell
 npm install @faker-js/faker --save-dev
 ```
 
 Génération de fausses données avec faker avec le code ci-dessous :
 
-```http
+```shell
 import faker from 'faker';
 import {writeFile} from 'fs';
 
@@ -152,7 +152,7 @@ const jsonData = JSON.stringify(users, null, 2);
 
 Insertion dans l'instance mongo 1 des données générées par faker :
 
-```http
+```shell
 docker exec -i mongo1 mongoimport --db myReplicaSet --collection usersCollection --drop --jsonArray < c:\Users\PHAM\Desktop\Docker\users.json
 ```
 
@@ -161,25 +161,25 @@ docker exec -i mongo1 mongoimport --db myReplicaSet --collection usersCollection
 
 Accées au cli :
 
-```http
+```shell
 docker exec -it mongo1 mongosh
 ```
 
 DataBase ciblée :
 
-```http
+```shell
 use myReplicaSet
 ```
 
 
 Insertion de données :
-```http
+```shell
 db.userCollection.insertOne({"name": "Guillaume Pham","age": 21,"email": "guillaume.pham@ynov.com","createdAt": "2023-05-07T15:11:49.439Z" })
 ```
 
 Résultat :
 
-```http
+```shell
 {
 	"acknowledged" : true,
 	"insertedId" : ObjectId("661eb241901a3c398d7b2da9")
