@@ -1,0 +1,1 @@
+docker exec -i mongo1 mongoimport --db myReplicaSet --collection usersCollection --drop --jsonArray < "C:\Users\pham\Documents\GitHub\NoSql\Etape2\users.json"

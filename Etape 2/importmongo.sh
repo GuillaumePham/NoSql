@@ -1,1 +1,0 @@
-docker exec -i mongo1 mongoimport --db myReplicaSet --collection usersCollection --drop --jsonArray < c:\Users\PHAM\Desktop\Docker\users.json

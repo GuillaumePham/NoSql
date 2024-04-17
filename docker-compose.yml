@@ -1,9 +1,9 @@
-version: '3'
+version: '3.7'
 
 services:
   mongo1:
     container_name: mongo1
-    image: mongo:5
+    image: mongo:latest
     command: mongod --replSet myReplicaSet --bind_ip localhost,mongo1
     ports:
       - "27017:27017"
@@ -12,7 +12,7 @@ services:
 
   mongo2:
     container_name: mongo2
-    image: mongo:5
+    image: mongo:latest
     command: mongod --replSet myReplicaSet --bind_ip localhost,mongo2
     ports:
       - "27018:27017"
@@ -21,7 +21,7 @@ services:
 
   mongo3:
     container_name: mongo3
-    image: mongo:5
+    image: mongo:latest
     command: mongod --replSet myReplicaSet --bind_ip localhost,mongo3
     ports:
       - "27019:27017"

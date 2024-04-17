@@ -7,7 +7,7 @@ async function main() {
   try {
     const database = client.db("myReplicaSet");
     const maCollection = database.collection('usersCollection'); 
-    const user = { name: "Guillaume PHAM" };
+    const user = { name: "Orianne Monrouzies" };
     const result = await maCollection.deleteOne(user);
     console.log(`${result.deletedCount} document(s) was/were deleted.`);
     }

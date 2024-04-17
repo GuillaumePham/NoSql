@@ -9,27 +9,27 @@ async function main() {
 
     try {
         await client.connect();
-        console.log('Connexion réussie au serveur MongoDB');
+        // console.log('Connexion réussie au serveur MongoDB');
         const db = client.db("");
-        const documents = await db.collection('maCollection').find({}).toArray();
-        console.log('Documents récupérés de la collection', maCollection + ':');
+        const documents = await db.collection(maCollection).find({}).toArray();
+        //console.log('Documents récupérés de la collection', maCollection + ':');
         //console.log(documents);
     } catch (error) {
         console.error('Erreur lors de la connexion à MongoDB:', error);
     } finally {
           const client = new MongoClient(url);
           try {
-            const user = {
+              await client.connect();
+              const user = {
                 name: "Orianne Monrouzies",
                 age: 20,
                 email: "YAYA",
                 createdAt: "2024-12-24T08:46:01.145Z"
               };
-              await client.connect();
               console.log('Connexion réussie au serveur MongoDB');
               const db = client.db(dbName);
-              const result = await db.collection('maCollection').insertOne(user);
-              console.log('Document inséré avec succès:', result.insertedId);
+              const result = await db.collection(maCollection).insertOne(user);
+              console.log('Document inséré avec succès:', result);
           } catch (error) {
               console.error('Erreur lors de la connexion à MongoDB:', error);
           } finally {

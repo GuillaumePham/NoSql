@@ -7,7 +7,7 @@ async function main() {
   try {
     const database = client.db("myReplicaSet");
     const maCollection = database.collection('usersCollection'); 
-    const result = await maCollection.find({ "age": { "$gt": 30 } });
+    const result = await maCollection.find({age: {$gt: 30}});
     const documents = await result.toArray();
     console.log(documents);
 
